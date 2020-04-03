@@ -59,11 +59,11 @@ def kysymys(): #funktio näyttää kysymysmerkin klikkaamisen jälkeen allaoleva
 
 ikkuna = Tk()
 ikkuna.geometry('250x250')
-ikkuna.configure(background = 'LightSteelBlue3') #lisätään taustaväri.
+ikkuna.configure(background = 'LightSteelBlue3')
 ikkuna.title('Nelilaskin')
 
 frame1 = Frame(ikkuna) #painikkeiden, kenttien jne asettelu toteutetaan frame-komponenttien avulla.
-frame1.configure(background = 'gray49') #annetaan taustaväri frame-komponentille.
+frame1.configure(background = 'gray49')
 frame2 = Frame(ikkuna)
 frame3 = Frame(ikkuna)
 frame3.configure(background = 'gray49')
@@ -73,19 +73,16 @@ frame3.configure(background = 'gray49')
 luku1 = Entry(frame1, width=5, borderwidth = 2)
 luku2 = Entry(frame1, width=5, borderwidth = 2)
 tulos = Entry(frame3, width=5, borderwidth = 2)
-
 plus = Button(frame2, text='+', command = plussaa, relief= 'groove', fg = 'blue')
 miinus = Button(frame2, text='-', command = vahenna, relief = 'groove', fg = 'blue')
 kerto = Button(frame2, text='*', command = kerro, relief = 'groove', fg = 'blue')
 jako = Button(frame2, text='/', command = jaa, relief = 'groove', fg = 'blue')
-
 potpainike = Button(frame2, text = 'pow', command = potenssi, relief = 'groove', fg = 'blue') #määritellään painikkeiden toiminnalisuus command komennolla
 prospainike = Button(frame2, text = '%', command = prosentti, relief = 'groove',fg = 'blue') #ja ulkonäkö relief komennolla.
 tyhjennys = Button(frame2, text = 'C', command = tyhjenna, relief = 'groove', fg = 'blue')
-
-luku1txt = Label(frame1, text = 'Luku 1 tai %: ', background = 'gray49')
-luku2txt = Label(frame1, text = 'Luku 2:', background = 'gray49')
-tulostxt = Label(frame1, text = 'Tulos:', background = 'gray49')
+luku1txt = Label(frame1, text = 'Number 1 or %: ', background = 'gray49')
+luku2txt = Label(frame1, text = 'Number 2:', background = 'gray49')
+tulostxt = Label(frame1, text = 'Result:', background = 'gray49')
 tyhja = Label(ikkuna, background = 'LightSteelBlue3')
 kysymysmerkki = Button (frame1, text = '?', command = kysymys, background = 'gray49')
 
